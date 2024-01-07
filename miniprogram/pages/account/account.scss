@@ -1,0 +1,54 @@
+.container {
+  display: grid;
+  grid-template-columns: 220rpx auto;
+  .panelL {
+    height: 100vh;
+    .van-sidebar {
+      margin-top: 0rpx;
+      width: 210rpx;
+      .van-sidebar-item{
+        width: 210rpx;
+        font-size: 32rpx;
+        align-self: start;
+      }
+    }
+  }
+  .panelR {
+    height: 100vh;
+    background-color: var(--lightColor);
+    .adminlist{
+      display: grid;
+      grid-template-columns: 3fr  1fr;
+      align-items: center;
+    }
+
+    .inline{
+      display: grid;
+      grid-template-columns: 3fr 3fr 1fr;
+      margin-top:20rpx ; 
+      .text{
+        text-align: right;
+      }
+      .input{
+        width: 300rpx;
+        border: 1px solid black;
+        border-radius: 5%;
+      }
+    
+    }
+    .inlineButton{
+      margin-top: 30rpx;
+      display: flex;
+      justify-content: center;
+      .button{
+        width: 50%;
+        background-color: #4CAF50;
+      }
+    }
+    .errorMessage{
+      color: red;
+    }
+  }
+}
+
+

@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/admin/admin",
+    "pages/news/news",
+    "pages/detail/detail",
+    "pages/account/account",
+    "pages/login/login",
+    "pages/datainsert/datainsert",
+    "pages/updateDetail/updateDetail",
+    "pages/insertDetail/insertDetail"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "好人好事",
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "light"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#4C4D4E",
+    "selectedColor": "#BDA066",
+    "list": [
+      {
+        "text": "首页",
+        "pagePath": "pages/index/index",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home-fill.png"
+      },
+      {
+        "text": "资讯",
+        "pagePath": "pages/news/news",
+        "iconPath": "images/news.png",
+        "selectedIconPath": "images/news-fill.png"
+      },
+      {
+        "text": "管理",
+        "pagePath": "pages/login/login",
+        "iconPath": "images/all.png",
+        "selectedIconPath": "images/all-fill.png"
+      }
+    ]
+  },
+  "usingComponents": {
+    "van-icon": "@vant/weapp/icon/index",
+    "footer": "/components/footer/footer"
+  }
+}

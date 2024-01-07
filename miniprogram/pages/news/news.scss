@@ -1,0 +1,67 @@
+.banner{
+  border-top: 1px solid var(--themeColor);
+  padding-top: 30rpx;
+  margin-bottom: 30rpx;
+  .swiper{
+    height: 460rpx;
+    .swiper-item{
+      .image{
+       width: 690rpx;
+       height: 460rpx;
+       border-radius: 30rpx;
+      }
+      .text{
+        color: white;
+        position: absolute;
+        bottom: 10%;
+        left:50%;
+        transform:translateX(-50%);
+      }
+    }
+  }
+ }
+ 
+.news{
+  padding:50rpx 30rpx;
+}
+.loading{
+  display: flex;
+  justify-content: center;
+}
+.nomore{
+  display: flex;
+  justify-content: center;
+  font-size: 0.5em;
+  opacity: 0.5;
+}
+
+/* WXSS 部分 */
+.search-container {
+  border:1px solid var(--themeColor);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20rpx;
+  .search-icon{
+    color: var(--themeColor);
+    height: 2em;
+  }
+}
+
+.search-input {
+  flex: 1;
+  margin: 10rpx;
+}
+
+.picker {
+  width: 120rpx;
+}
+
+.picker-content {
+  font-size: 32rpx;
+  border: 1rpx solid #ccc;
+  padding: 10rpx;
+  border-radius: 5rpx;
+  display: flex;
+  justify-content: center;
+}

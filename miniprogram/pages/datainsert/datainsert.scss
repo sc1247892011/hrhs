@@ -1,0 +1,42 @@
+.container {
+  display: grid;
+  grid-template-columns: 220rpx auto;
+  .panelL {
+    height: 100vh;
+    .van-sidebar {
+      margin-top: 0rpx;
+      width: 210rpx;
+      .van-sidebar-item{
+        width: 210rpx;
+        font-size: 32rpx;
+        align-self: start;
+      }
+    }
+  }
+  .panelR {
+    height: 100vh;
+  }
+}
+
+.content{
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50%;
+  background-color: #3498db; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20rpx;
+  color:white;
+}
+
+.customCallout {
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 50%;
+  background-color: #e74c3c; /* 设置外层圆的颜色 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+

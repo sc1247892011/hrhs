@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "xzs-news-item":"/components/xzs-news-item/xzs-news-item",
+    "van-icon":"@vant/weapp/icon/index",
+    "van-loading": "@vant/weapp/loading/index"
+  },
+  "navigationBarTitleText": "最新资讯"
+}

@@ -1,0 +1,86 @@
+.detail{
+  padding:30rpx;
+  margin:10rpx ;
+  border: solid 1px grey ;
+  box-shadow: 0 0 10rpx rgba(0, 0, 0, 1); /* 添加轻微阴影效果 */
+  
+  .title{
+    font-size: 50rpx;
+    line-height: 1.5em;
+  }
+  .info{
+    font-size: 28rpx;
+    color:#999;
+    display: flex;
+    justify-content: space-between;
+    padding:30rpx 0 50rpx;
+    .left{
+      text{
+        padding-right: 15rpx;
+      }
+    }
+    .right{
+      display: flex;
+      align-items: center;
+      color:var(--themeColor);
+      position: relative;
+      .share{
+        position: absolute;
+        top:0;
+        left:0;
+        opacity: 0;
+      }
+      text{
+        padding-left:5rpx;
+      }
+    }    
+  }
+  .content{ 
+    display: flex;
+    justify-content: center;
+    .imgstyle{
+      border-radius: 50rpx;      
+    }  
+  }
+
+  .text{
+    text-indent: 2em; /* 设置首行缩进为2个字符宽度 */
+    line-height: 1.5; /* 设置行高为1.5倍字体大小 */
+    letter-spacing: 0.1em; /* 设置字体间距为0.1个字符宽度 */
+    font-size: 16px; /* 设置字体大小，可根据需要调整 */
+    color: #333; /* 设置文字颜色，可根据需要调整 */
+  }
+
+  .copyright{
+    margin-top:30rpx;
+    background:var(--globalBgColor2);
+    padding:30rpx;
+    font-size: 26rpx;
+    color:#888;
+    .top{
+      font-size: 30rpx;
+      padding-bottom:15rpx;
+    }
+  }
+}
+
+.text {
+  text-indent: 2em;
+  line-height: 1.5; /* 设置行高，1.5 表示当前字体大小的 1.5 倍 */
+  letter-spacing: 10rpx; /* 设置字间距 */
+  background-color: var(--globalBgColor2); /* 设置文本背景色 */
+  padding: 4px; /* 添加内边距 */
+
+}
+.textimg{
+  width: 80%;
+  height: 450rpx;
+  display: flex;
+  justify-content: center;
+  .img{
+    width: 100%; /* 图片宽度填充整个容器 */
+    height: 100%; /* 图片高度填充整个容器 */
+    object-fit: cover; /* 使用 cover 属性，保持宽高比例并填充整个容器 */
+    border-radius: 5%;
+  } 
+}

@@ -1,0 +1,43 @@
+<view class="container">
+  <view>
+    <view class="form-item">
+      <label>标题：</label>
+      <input class = "input"  type="text" placeholder="请输入标题" bindinput="inputTitle" value="{{title}}" />
+    </view>
+    <view class="form-item">
+      <label>作者：</label>
+      <input class = "input"  type="text" placeholder="{{currentUser}}" disabled="true" bindinput="inputAuthor" value="{{currentUser}}" />
+    </view>
+    <view class="form-item">
+      <label>创建日期：</label>
+      <input class = "input"  type="date" value="{{createdate}}" disabled="true" bindinput="inputDate" />
+    </view>
+    <view class="form-selector">
+      <picker class="picker" mode="selector" bindchange="onPickerChange1" value="{{cityIndex}}" range="{{cities}}">
+    <view class="picker-content">{{cities[cityIndex]}}</view>
+  </picker>
+
+  <picker class="picker" mode="selector" bindchange="onPickerChange2" value="{{yearIndex}}" range="{{years}}">
+    <view class="picker-content">{{years[yearIndex]}}</view>
+  </picker>
+
+  <picker class="picker" mode="selector" bindchange="onPickerChange3" value="{{seasonIndex}}" range="{{seasons}}">
+    <view class="picker-content">{{seasons[seasonIndex]}}</view>
+  </picker>
+    </view>
+    <view class="form-item">
+      <label>内容：</label>
+      <textarea class="textarea" value="{{content}}" maxlength="-1" placeholder="请输入内容" bindinput="inputContent"></textarea>
+    </view>
+    <view class="form-item">
+      <label>上传图片：</label>
+      <button class="upload-btn" bindtap="chooseImage">选择图片</button>
+    </view>
+    <view class="form-image">
+      <image class="uploaded-image" src="{{image}}" mode="aspectFill"></image>
+    </view>
+    <view class="form-item">
+      <button class="button" bind:tap="submitForm">提交</button>
+    </view>
+  </view>
+</view>

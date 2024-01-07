@@ -1,0 +1,5 @@
+<view class="footer">  
+  <view class="row">解释权归XXX有限公司所有</view>
+  <view class="row">Copyright © {{year}} 版权所有</view>
+  <view class="row">江苏省XXX市中弘广场D座一楼102a</view>
+</view>

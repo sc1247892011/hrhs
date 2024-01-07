@@ -1,0 +1,41 @@
+<navigator url="/pages/detail/detail?id={{item.id}}"  class="nsitem">
+<view class="pic">
+<image class="img" src="{{item.image}}" mode="aspectFill"/>
+</view>
+<view class="text">
+<view class="title">
+{{item.title}}
+</view>
+<view class="info">
+<view class="block">
+<van-icon class="van-icon"
+name="clock-o" size="14"></van-icon>
+<text>{{fn.substring(item.createdate,5)}}</text>
+</view>
+
+<view class="block">
+<van-icon  class="van-icon"
+ name="eye-o" size="14"></van-icon>
+<text>{{item.num}}</text>
+</view>
+
+<view class="block">
+<van-icon name="manager-o" size="14" />
+<text>{{item.author}}</text>
+</view>
+</view>
+</view>
+</navigator>
+
+<wxs module="fn">
+module.exports={
+  substring:function(str,index){
+    str = str || "";
+    if(str.length>index){
+      return str.substring(index);
+    }else{
+      return str;
+    }
+  }
+}
+</wxs>

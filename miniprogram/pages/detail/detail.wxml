@@ -1,0 +1,28 @@
+
+<view class="detail">
+  <view class="title">{{title}}</view>
+  <view class="info">
+    <view class="left">      
+      <text>{{createdate}}</text> 
+      <text>{{author}}</text>
+      <text>{{num}}阅读</text>
+    </view>
+    <view class="right">
+      <van-icon name="share-o" size="18" />
+      <text>分享</text>
+      <button open-type="share" class="share" size="mini">
+      </button>
+    </view>
+  </view>
+  <view class="content">
+  <image src="{{image}}" class="imgstyle"></image>
+  </view>
+  <view>
+  <rich-text nodes="{{content}}" class="text"></rich-text>
+  </view>
+ 
+  <view class="copyright">
+    <view class="top">免责声明：</view>
+    <view>好人好事为热心居民推荐，如有问题请联系我们。</view>
+  </view>
+</view>

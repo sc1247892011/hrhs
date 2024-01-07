@@ -1,0 +1,26 @@
+page{
+height: 100%;  
+}
+
+.content{
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50%;
+  background-color: #3498db; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20rpx;
+  color:white;
+}
+
+.customCallout {
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 50%;
+  background-color: #e74c3c; /* 设置外层圆的颜色 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+  

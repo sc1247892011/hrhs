@@ -1,0 +1,4 @@
+<view class="container">
+<view class="button" bind:tap="toAccount">账号管理</view>
+<view class="button" bind:tap="toDataInsert">数据录入</view>
+</view>

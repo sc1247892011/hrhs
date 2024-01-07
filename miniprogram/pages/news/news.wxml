@@ -1,0 +1,46 @@
+<view class="banner">
+<swiper
+previous-margin="30rpx"
+circular
+autoplay
+interval="3000"
+indicator-dots="true"
+indicator-color="white"
+indicator-active-color="grey"
+class="swiper"
+>
+  <swiper-item wx:for="{{swiperArr}}" wx:key="index" class="swiper-item">
+    <navigator url="/pages/detail/detail?id={{item.id}}">
+      <image class="image" src="{{item.image}}" bind:tap="tabSwiper" mode=""/>
+    </navigator>
+    <text class="text">{{item.title}}</text>
+  </swiper-item>
+</swiper>
+</view>
+<view class="search-container">
+  <picker class="picker" mode="selector" bindchange="onPickerChange1" value="{{cityIndex}}" range="{{cities}}">
+    <view class="picker-content">{{cities[cityIndex]}}</view>
+  </picker>
+
+  <picker class="picker" mode="selector" bindchange="onPickerChange2" value="{{yearIndex}}" range="{{years}}">
+    <view class="picker-content">{{years[yearIndex]}}</view>
+  </picker>
+
+  <picker class="picker" mode="selector" bindchange="onPickerChange3" value="{{seasonIndex}}" range="{{seasons}}">
+    <view class="picker-content">{{seasons[seasonIndex]}}</view>
+  </picker>
+
+  <input class="search-input" type="text" placeholder="请输入查询内容" bindinput="onInput" />
+  <van-icon name="search" class="search-icon" bind:tap="onSearch" />
+</view>
+<view class="news">
+  <view class="content">
+  <view class="box" wx:key="id" wx:for="{{NewsArr}}">
+    <xzs-news-item item="{{item}}"></xzs-news-item>
+  </view>
+  </view>
+  
+  <view class="nomore">
+    <text>没有更多数据了~</text>
+  </view>
+</view>

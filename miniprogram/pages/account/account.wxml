@@ -1,0 +1,31 @@
+<view class="container">
+  <view class="panelL">
+    <van-sidebar class="van-sidebar" active-key="{{ activeKey }}">
+    <van-sidebar-item class="van-sidebar-item" bind:tap="sidebarOnClick" title="修改密码" />
+    <van-sidebar-item wx:if="{{currentUser=='root'}}" class="van-sidebar-item" bind:tap="sidebarOnClick1" title="管理员列表" />
+    <van-sidebar-item wx:if="{{currentUser=='root'}}" class="van-sidebar-item" bind:tap="sidebarOnClick2" title="创建管理员" />
+  </van-sidebar>
+  </view>
+  <view class="panelR">
+    <view wx:if="{{activeKey==1}}">
+      <view wx:for="{{adminArr}}" wx:key="index" class="adminlist">
+        <view>{{index+1}}.{{item.username}}</view><view><button disabled="{{item.username=='root'}}" data-username="{{item.username}}" bind:tap="deleteUser">删除</button></view>
+      </view>
+    </view>
+    <view wx:elif="{{activeKey==2}}">
+        <view class="inline"><view class="text">账户:</view><input class="input" placeholder="请输入账户名" bindinput="onAccountInput"/></view>
+        <view class="inline"><view class="text">密码:</view><input class="input" placeholder="请输入密码"  type="password" bindinput="onPasswordInput"/></view>
+        <view class="inline"><view class="text">密码确认:</view><input class="input" placeholder="请确认密码"  type="password" bindinput="onPasswordConfirm"/></view>
+        <view class="inlineButton"><button bind:tap="sign" class="button">注册</button></view>
+        <view class="errorMessage">{{errorMessage}}</view>
+    </view>
+    <view wx:elif="{{activeKey==0}}">
+        <view class="inline"><view class="text">当前账户:</view><view><input class="input" disabled="true" placeholder="{{currentUser}}" /></view></view>
+        <view class="inline"><view class="text">旧密码:</view><input class="input" placeholder="请输入旧密码"  type="password" bindinput="onPasswordInput"/></view>
+        <view class="inline"><view class="text">新密码:</view><input class="input" placeholder="请输入新密码"  type="password" bindinput="onPasswordConfirm"/></view>
+        <view class="inline"><view class="text">新密码确认:</view><input class="input" placeholder="请确认密码"  type="password" bindinput="onPasswordConfirm2"/></view>
+        <view class="inlineButton"><button bind:tap="changePassword" class="button">修改</button></view>
+        <view class="errorMessage">{{errorMessage}}</view>
+    </view>
+  </view>
+</view>
